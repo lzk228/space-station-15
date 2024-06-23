@@ -14,6 +14,7 @@ namespace Content.Server.GameTicking.Commands
     {
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private readonly IGameMapManager _gameMapManager = default!;
 
         public string Command => "setmap";
         public string Description => Loc.GetString("setmap-command-description");
@@ -27,11 +28,12 @@ namespace Content.Server.GameTicking.Commands
                 return;
             }
 //// CODE
-
+            GameMapPrototype name;
+            map = (GameMapPrototype) args[0];
             var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
             if (ticker.CanUpdateMap())
             {
-                if (_gameMapManager.TrySelectMapIfEligible(picked.ID))
+                if (_gameMapManager.TrySelectMapIfEligible(map.ID))
                 {
                     ticker.UpdateInfoText();
                 }
@@ -40,12 +42,12 @@ namespace Content.Server.GameTicking.Commands
             {
                 if (ticker.RoundPreloadTime <= TimeSpan.Zero)
                 {
-                    shell.WriteLine(Loc.GetString("ui-vote-map-notlobby"));
+                    shell.WriteLine(Loc.GetString("setmap-command-notlobby"));
                 }
                 else
                 {
                     var timeString = $"{ticker.RoundPreloadTime.Minutes:0}:{ticker.RoundPreloadTime.Seconds:00}";
-                    shell.WriteLine(Loc.GetString("ui-vote-map-notlobby-time", ("time", timeString)));
+                    shell.WriteLine(Loc.GetString("setmap-command-notlobby-time", ("time", timeString)));
                 }
             }
 
