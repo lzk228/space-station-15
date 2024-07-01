@@ -16,7 +16,7 @@ namespace Content.Shared.Item
 
         private void OnMobStateChanged(EntityUid uid, MakeItemOnDeadComponent component, MobStateChangedEvent args)
         {
-            TryComp<MobStateComponent>(uid, out var mobState)
+            TryComp<MobStateComponent>(uid, out var mobState);
 
             if (mobState.CurrentState == MobState.Dead)
             {
