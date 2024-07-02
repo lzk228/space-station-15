@@ -38546,17 +38546,6 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#990000FF'
-  - uid: 8794
-    components:
-    - type: Transform
-      anchored: False
-      pos: -14.5,-45.5
-      parent: 1
-    - type: AtmosPipeColor
-      color: '#990000FF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 10091
     components:
     - type: Transform
@@ -38788,18 +38777,6 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
-  - uid: 10130
-    components:
-    - type: Transform
-      anchored: False
-      rot: 1.5707963267948966 rad
-      pos: 21.5,-11.5
-      parent: 1
-    - type: AtmosPipeColor
-      color: '#990000FF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 10131
     components:
     - type: Transform
@@ -43995,18 +43972,6 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#990000FF'
-  - uid: 11152
-    components:
-    - type: Transform
-      anchored: False
-      rot: 3.141592653589793 rad
-      pos: -37.5,0.5
-      parent: 1
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 11153
     components:
     - type: Transform
@@ -46995,18 +46960,6 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
-  - uid: 12253
-    components:
-    - type: Transform
-      anchored: False
-      rot: -1.5707963267948966 rad
-      pos: -4.5,56.5
-      parent: 1
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 12254
     components:
     - type: Transform
