@@ -75262,18 +75262,6 @@ entities:
       parent: 60
     - type: AtmosPipeColor
       color: '#0335FCFF'
-  - uid: 898
-    components:
-    - type: Transform
-      anchored: False
-      rot: 1.5707963267948966 rad
-      pos: -10.5,-22.5
-      parent: 60
-    - type: AtmosPipeColor
-      color: '#0335FCFF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 899
     components:
     - type: Transform
@@ -75298,18 +75286,6 @@ entities:
       parent: 60
     - type: AtmosPipeColor
       color: '#0335FCFF'
-  - uid: 902
-    components:
-    - type: Transform
-      anchored: False
-      rot: 1.5707963267948966 rad
-      pos: -13.5,-22.5
-      parent: 60
-    - type: AtmosPipeColor
-      color: '#0335FCFF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 903
     components:
     - type: Transform
@@ -82937,18 +82913,6 @@ entities:
       parent: 60
     - type: AtmosPipeColor
       color: '#FF1212FF'
-  - uid: 8899
-    components:
-    - type: Transform
-      anchored: False
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-31.5
-      parent: 60
-    - type: AtmosPipeColor
-      color: '#0335FCFF'
-    - type: Physics
-      canCollide: True
-      bodyType: Dynamic
   - uid: 8918
     components:
     - type: Transform
