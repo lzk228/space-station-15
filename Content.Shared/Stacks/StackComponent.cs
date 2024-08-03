@@ -72,12 +72,11 @@ namespace Content.Shared.Stacks
         public bool IsComposite;
 
         /// <summary>
-        /// Sprite layers used in stack visualizer. Sprites first in layer correspond to lower stack states
-        /// e.g. <code>_spriteLayers[0]</code> is lower stack level than <code>_spriteLayers[1]</code>.
+        /// Sprite layers used in stack visualizer. The key represents the minimum count required for the corresponding sprite layer.
         /// </summary>
         [DataField("layerStates")]
         [ViewVariables(VVAccess.ReadWrite)]
-        public List<string> LayerStates = new();
+        public Dictionary<int, string> LayerStates = new();
     }
 
     [Serializable, NetSerializable]

@@ -56,20 +56,30 @@ namespace Content.Client.Stack
             if (args.Sprite == null || comp.LayerStates.Count < 1)
                 return;
 
-            // Skip processing if no actual
+            // Skip processing if no actual count is found
             if (!_appearanceSystem.TryGetData<int>(uid, StackVisuals.Actual, out var actual, args.Component))
                 return;
 
             if (!_appearanceSystem.TryGetData<int>(uid, StackVisuals.MaxCount, out var maxCount, args.Component))
-                maxCount = comp.LayerStates.Count;
+                maxCount = comp.LayerStates.Keys.Max();
 
             if (!_appearanceSystem.TryGetData<bool>(uid, StackVisuals.Hide, out var hidden, args.Component))
                 hidden = false;
 
+            // Find the appropriate layer state based on the actual count
+            string selectedLayerState = comp.LayerStates
+                .Where(kv => actual >= kv.Key)
+                .OrderByDescending(kv => kv.Key)
+                .Select(kv => kv.Value)
+                .FirstOrDefault();
+
+            if (selectedLayerState == null)
+                return;
+
             if (comp.IsComposite)
-                _counterSystem.ProcessCompositeSprite(uid, actual, maxCount, comp.LayerStates, hidden, sprite: args.Sprite);
+                _counterSystem.ProcessCompositeSprite(uid, actual, maxCount, new List<string> { selectedLayerState }, hidden, sprite: args.Sprite);
             else
-                _counterSystem.ProcessOpaqueSprite(uid, comp.BaseLayer, actual, maxCount, comp.LayerStates, hidden, sprite: args.Sprite);
+                _counterSystem.ProcessOpaqueSprite(uid, comp.BaseLayer, actual, maxCount, new List<string> { selectedLayerState }, hidden, sprite: args.Sprite);
         }
     }
 }
