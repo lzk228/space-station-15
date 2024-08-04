@@ -45,9 +45,9 @@
     stackType: Steel
     baseLayer: base
     layerStates:
-    - steel
-    - steel_2
-    - steel_3
+      0: steel
+      10: steel_2
+      20: steel_3
   - type: Sprite
     state: steel_3
     layers:
@@ -118,9 +118,9 @@
     stackType: Brass
     baseLayer: base
     layerStates:
-    - brass
-    - brass_2
-    - brass_3
+      0: brass
+      10: brass_2
+      20: brass_3
   - type: Sprite
     state: brass_3
     layers:
@@ -181,9 +181,9 @@
     stackType: Plasteel
     baseLayer: base
     layerStates:
-    - plasteel
-    - plasteel_2
-    - plasteel_3
+      0: plasteel
+      10: plasteel_2
+      20: plasteel_3
   - type: Sprite
     state: plasteel_3
     layers:

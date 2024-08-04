@@ -37,9 +37,9 @@
     stackType: Cardboard
     baseLayer: base
     layerStates:
-    - cardboard
-    - cardboard_2
-    - cardboard_3
+      0: cardboard
+      10: cardboard_2
+      20: cardboard_3
   - type: Sprite
     state: cardboard_3
     layers:
@@ -97,9 +97,9 @@
     stackType: Cloth
     baseLayer: base
     layerStates:
-    - cloth
-    - cloth_2
-    - cloth_3
+      0: cloth
+      10: cloth_2
+      20: cloth_3
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -163,9 +163,9 @@
     stackType: Durathread
     baseLayer: base
     layerStates:
-    - durathread
-    - durathread_2
-    - durathread_3
+      0: durathread
+      10: durathread_2
+      20: durathread_3
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -224,9 +224,9 @@
     stackType: WoodPlank
     baseLayer: base
     layerStates:
-    - wood
-    - wood_2
-    - wood_3
+      0: wood
+      10: wood_2
+      20: wood_3
   - type: Sprite
     state: wood
     layers:
@@ -352,9 +352,9 @@
     stackType: Diamond
     baseLayer: base
     layerStates:
-    - diamond
-    - diamond_2
-    - diamond_3
+      0: diamond
+      10: diamond_2
+      20: diamond_3
   - type: Sprite
     state: diamond
     layers:
@@ -394,9 +394,9 @@
     stackType: Cotton
     baseLayer: base
     layerStates:
-    - cotton
-    - cotton_2
-    - cotton_3
+      0: cotton
+      10: cotton_2
+      20: cotton_3
   - type: Sprite
     state: cotton_3
     layers:
@@ -442,9 +442,9 @@
     stackType: Pyrotton
     baseLayer: base
     layerStates:
-    - pyrotton
-    - pyrotton_2
-    - pyrotton_3
+      0: pyrotton
+      10: pyrotton_2
+      20: pyrotton_3
   - type: Sprite
     state: pyrotton_3
     layers:
@@ -504,8 +504,8 @@
     count: 10
     baseLayer: base
     layerStates:
-      - bananium
-      - bananium_1
+      0: bananium
+      5: bananium_1
   - type: FlavorProfile
     flavors:
       - banana
@@ -608,9 +608,9 @@
     stackType: Bones
     baseLayer: base
     layerStates:
-    - bones
-    - bones_2
-    - bones_3
+      0: bones
+      10: bones_2
+      20: bones_3
   - type: Sprite
     state: cotton_3
     layers:

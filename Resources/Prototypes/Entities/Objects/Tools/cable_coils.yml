@@ -41,9 +41,9 @@
     stackType: CableHV
     baseLayer: base
     layerStates:
-    - coilhv-10
-    - coilhv-20
-    - coilhv-30
+      0: coilhv-10
+      10: coilhv-20
+      20: coilhv-30
   - type: Sprite
     state: coilhv-30
     layers:
@@ -108,9 +108,9 @@
     stackType: CableMV
     baseLayer: base
     layerStates:
-    - coilmv-10
-    - coilmv-20
-    - coilmv-30
+      0: coilmv-10
+      10: coilmv-20
+      20:  coilmv-30
   - type: Sprite
     state: coilmv-30
     layers:
@@ -179,9 +179,9 @@
   - type: Stack
     baseLayer: base
     layerStates:
-    - coillv-10
-    - coillv-20
-    - coillv-30
+      0: coillv-10
+      10: coillv-20
+      20: coillv-30
   - type: CablePlacer
     cablePrototypeID: CableApcExtension
     blockingWireType: Apc

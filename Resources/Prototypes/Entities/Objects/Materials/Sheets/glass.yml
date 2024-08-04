@@ -61,9 +61,9 @@
     stackType: Glass
     baseLayer: base
     layerStates:
-    - glass
-    - glass_2
-    - glass_3
+      0: glass
+      10: glass_2
+      20: glass_3
   - type: Sprite
     state: glass_3
     layers:
@@ -131,9 +131,9 @@
     stackType: ReinforcedGlass
     baseLayer: base
     layerStates:
-    - rglass
-    - rglass_2
-    - rglass_3
+      0: rglass
+      10: rglass_2
+      20: rglass_3
   - type: Sprite
     state: rglass_3
     layers:
@@ -211,9 +211,9 @@
     stackType: PlasmaGlass
     baseLayer: base
     layerStates:
-    - pglass
-    - pglass_2
-    - pglass_3
+      0: pglass
+      10: pglass_2
+      20: pglass_3
   - type: Sprite
     state: pglass_3
     layers:
@@ -286,9 +286,9 @@
     stackType: ReinforcedPlasmaGlass
     baseLayer: base
     layerStates:
-    - rpglass
-    - rpglass_2
-    - rpglass_3
+      0: rpglass
+      10: rpglass_2
+      20: rpglass_3
   - type: Sprite
     state: rpglass_3
     layers:
@@ -341,9 +341,9 @@
     stackType: UraniumGlass
     baseLayer: base
     layerStates:
-    - uglass
-    - uglass_2
-    - uglass_3
+      0: uglass
+      10: uglass_2
+      20: uglass_3
   - type: Sprite
     state: uglass_3
     layers:
@@ -415,9 +415,9 @@
     stackType: ReinforcedUraniumGlass
     baseLayer: base
     layerStates:
-    - ruglass
-    - ruglass_2
-    - ruglass_3
+      0: ruglass
+      10: ruglass_2
+      20: ruglass_3
   - type: Sprite
     state: ruglass_3
     layers:
@@ -470,9 +470,9 @@
     stackType: ClockworkGlass
     baseLayer: base
     layerStates:
-    - cglass
-    - cglass_2
-    - cglass_3
+      0: cglass
+      10: cglass_2
+      20: cglass_3
   - type: Sprite
     state: cglass_3
     layers:

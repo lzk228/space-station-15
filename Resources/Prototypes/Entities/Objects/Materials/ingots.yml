@@ -40,9 +40,9 @@
     stackType: Gold
     baseLayer: base
     layerStates:
-    - gold
-    - gold_2
-    - gold_3
+      0: gold
+      10: gold_2
+      20: gold_3
   - type: Sprite
     state: gold_3
     layers:
@@ -85,9 +85,9 @@
     stackType: Silver
     baseLayer: base
     layerStates:
-    - silver
-    - silver_2
-    - silver_3
+      0: silver
+      10: silver_2
+      20: silver_3
   - type: Sprite
     state: silver_3
     layers:

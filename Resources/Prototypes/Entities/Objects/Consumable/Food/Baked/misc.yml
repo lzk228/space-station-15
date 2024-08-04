@@ -211,15 +211,15 @@
     count: 1
     composite: true
     layerStates:
-    - pancakes1
-    - pancakes2
-    - pancakes3
-    - pancakes4
-    - pancakes5
-    - pancakes6
-    - pancakes7
-    - pancakes8
-    - pancakes9
+      1: pancakes1
+      2: pancakes2
+      3: pancakes3
+      4: pancakes4
+      5: pancakes5
+      6: pancakes6
+      7: pancakes7
+      8: pancakes8
+      9: pancakes9
   - type: Sprite
     state: pancakes1
     layers:
@@ -264,9 +264,9 @@
   - type: Stack
     stackType: PancakeBb
     layerStates:
-    - pancakesbb1
-    - pancakesbb2
-    - pancakesbb3
+      1: pancakesbb1
+      2: pancakesbb2
+      3: pancakesbb3
   - type: Sprite
     state: pancakesbb1
     layers:
@@ -293,9 +293,9 @@
   - type: Stack
     stackType: PancakeCc
     layerStates:
-    - pancakescc1
-    - pancakescc2
-    - pancakescc3
+      1: pancakescc1
+      2: pancakescc2
+      3: pancakescc3
   - type: Sprite
     state: pancakescc1
     layers:

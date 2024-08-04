@@ -33,11 +33,11 @@
     stackType: MetalRod
     baseLayer: base
     layerStates:
-    - rods
-    - rods_2
-    - rods_3
-    - rods_4
-    - rods_5
+      0: rods
+      6: rods_2
+      12: rods_3
+      18: rods_4
+      24: rods_5
   - type: Sprite
     state: rods_5
     layers:
