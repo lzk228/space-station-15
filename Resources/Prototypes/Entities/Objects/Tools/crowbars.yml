@@ -4,6 +4,8 @@
   id: BaseCrowbar
   abstract: true
   components:
+  - type: Sprite
+    sprite: Objects/Tools/crowbar.rsi
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/crowbar_drop.ogg
@@ -34,6 +36,7 @@
     slots:
     - Belt
   - type: Item
+    sprite: Objects/Tools/crowbar.rsi
     size: Normal
     shape:
     - 0,0,0,1
@@ -45,10 +48,8 @@
   description: A multipurpose tool to pry open doors and fight interdimensional invaders.
   components:
   - type: Sprite
-    sprite: Objects/Tools/crowbar.rsi
     state: icon
   - type: Item
-    sprite: Objects/Tools/crowbar.rsi
     storedSprite:
       sprite: Objects/Tools/crowbar.rsi
       state: storage
@@ -65,13 +66,11 @@
     - Crowbar
     - CrowbarRed
   - type: Sprite
-    sprite: Objects/Tools/crowbar.rsi
     layers:
     - state: icon
     - state: cover-icon
       color: "#990000"
   - type: Item
-    sprite: Objects/Tools/crowbar.rsi
     storedSprite:
       state: red-storage
       sprite: Objects/Tools/crowbar.rsi
@@ -99,13 +98,11 @@
   description: A multipurpose tool to pry open doors and fight interdimensional invaders, printed from an autolathe.
   components:
   - type: Sprite
-    sprite: Objects/Tools/crowbar.rsi
     layers:
     - state: icon
     - state: cover-icon
       color: "#00621c"
   - type: Item
-    sprite: Objects/Tools/crowbar.rsi
     storedSprite:
       state: green-storage
       sprite: Objects/Tools/crowbar.rsi
@@ -133,13 +130,11 @@
   description: A multipurpose tool to pry open doors and fight interdimensional invaders, found in toolboxes.
   components:
   - type: Sprite
-    sprite: Objects/Tools/crowbar.rsi
     layers:
     - state: icon
     - state: cover-icon
       color: "#673800"
   - type: Item
-    sprite: Objects/Tools/crowbar.rsi
     storedSprite:
       state: orange-storage
       sprite: Objects/Tools/crowbar.rsi
@@ -167,13 +162,11 @@
   description: A pocket crowbar designed to pry open doors and firelocks during power outages, dispensed from Engineering.
   components:
   - type: Sprite
-    sprite: Objects/Tools/crowbar.rsi
     layers:
     - state: icon
     - state: cover-icon
       color: "#968000"
   - type: Item
-    sprite: Objects/Tools/crowbar.rsi
     storedSprite:
       state: yellow-storage
       sprite: Objects/Tools/crowbar.rsi
