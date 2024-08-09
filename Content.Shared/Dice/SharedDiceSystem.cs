@@ -34,6 +34,8 @@ public abstract class SharedDiceSystem : EntitySystem
     private void OnLand(EntityUid uid, DiceComponent component, ref LandEvent args)
     {
         Roll(uid, component);
+
+        RaiseNetworkEvent(new DiceOfFateEvent(uid, args.User, comp.CurrentValue))
     }
 
     private void OnExamined(EntityUid uid, DiceComponent dice, ExaminedEvent args)

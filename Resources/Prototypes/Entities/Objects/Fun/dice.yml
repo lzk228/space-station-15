@@ -41,6 +41,13 @@
     state: d20_20
 
 - type: entity
+  parent: d20Dice
+  id: d20DiceOfFate
+  suffix: Dice Of Fate
+  components:
+  - type: DiceOfFate
+
+- type: entity
   parent: BaseDice
   id: d12Dice
   name: d12
