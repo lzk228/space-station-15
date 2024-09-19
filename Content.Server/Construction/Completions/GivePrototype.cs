@@ -13,7 +13,7 @@ namespace Content.Server.Construction.Completions;
 [DataDefinition]
 public sealed partial class GivePrototype : IGraphAction
 {
-    [DataField]
+    [DataField(required: true)]
     public EntProtoId Prototype { get; private set; } = string.Empty;
 
     [DataField]
