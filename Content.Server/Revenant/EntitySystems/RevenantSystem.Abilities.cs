@@ -2,6 +2,7 @@ using Content.Shared.Popups;
 using Content.Shared.Damage;
 using Content.Shared.Revenant;
 using Robust.Shared.Random;
+using Content.Server.Chat.Systems;
 using Content.Shared.Tag;
 using Content.Server.Storage.Components;
 using Content.Server.Light.Components;
@@ -43,6 +44,8 @@ public sealed partial class RevenantSystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly ChatSystem _chat = default!;
+
 
     private void InitializeAbilities()
     {
@@ -52,6 +55,7 @@ public sealed partial class RevenantSystem
 
         SubscribeLocalEvent<RevenantComponent, RevenantDefileActionEvent>(OnDefileAction);
         SubscribeLocalEvent<RevenantComponent, RevenantOverloadLightsActionEvent>(OnOverloadLightsAction);
+        SubscribeLocalEvent<RevenantComponent, RevenantSedateActionEvent>(OnSedateAction);
         SubscribeLocalEvent<RevenantComponent, RevenantBlightActionEvent>(OnBlightAction);
         SubscribeLocalEvent<RevenantComponent, RevenantMalfunctionActionEvent>(OnMalfunctionAction);
     }
@@ -312,6 +316,25 @@ public sealed partial class RevenantSystem
             var comp = EnsureComp<RevenantOverloadedLightsComponent>(allLight.First());
             comp.Target = ent; //who they gon fire at?
         }
+    }
+
+    private void OnSedateAction(EntityUid uid, RevenantComponent component, RevenantSedateActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!TryUseAbility(uid, component, component.SedateCost, component.SedateDebuffs))
+            return;
+
+        args.Handled = true;
+
+        var pendingSleeping = new PendingSleepingComponent
+        {
+            PendingTime = component.SedatePendingTime,
+        };
+        EntityManager.AddComponent(args.Target, pendingSleeping);
+
+        _chat.TryEmoteWithChat(uid, component.SedateYawnEmote);
     }
 
     private void OnBlightAction(EntityUid uid, RevenantComponent component, RevenantBlightActionEvent args)

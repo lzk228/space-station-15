@@ -24,6 +24,19 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: RevenantSedate
+  name: Sedate
+  description: Make your target sleep
+  productAction: ActionRevenantSedate
+  cost:
+    StolenEssence: 1
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
 #- type: listing
 #  id: RevenantBlight
 #  name: revenant-blight-name
